@@ -33,6 +33,9 @@ urlpatterns = [
 
 
 
+vid -13(ch11)   ------------- dictionary
+
+
 vid-11
 
 urlpatterns = [
