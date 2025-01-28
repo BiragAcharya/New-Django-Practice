@@ -1,0 +1,50 @@
+venv\Scripts\activate
+
+
+django-admin startproject ch3 .  ---- not create another file under project(vid-6)
+
+vid-7 : py manage.py runserver 4000
+
+video-8: ctrl+shift+p
+
+
+video :10
+
+# from app1 import views as ap1
+# from app2 import views as ap2
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', ap1.home, name='home'),
+#     path('app3/', ap2.myapp3, name='myapp3'),
+# ]
+
+
+#  OR
+
+from app1.views import  home
+from app2.views import  myapp3
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', home, name='home'),
+    path('app3/', myapp3, name='myapp3'),
+]
+
+
+
+vid-11
+
+urlpatterns = [
+    path('admin/', admin.site.urls),    #django default admin
+    # path('route', view, kwargs, name)
+    path('dj/', learn_django, {'status':'OK'}),
+    path('py/', learn_django),
+
+def learn_django(request, **kwargs):
+    status = kwargs.get('status')
+    return HttpResponse(f"<h1> Learn Django {status}<h1/>")
+
+path/dj/ = OK
+path/py/ = None
+
