@@ -36,7 +36,7 @@ urlpatterns = [
 vid -13(ch11)   ------------- dictionary
 
 
-vid-11
+vid-13
 
 urlpatterns = [
     path('admin/', admin.site.urls),    #django default admin
@@ -51,3 +51,14 @@ def learn_django(request, **kwargs):
 path/dj/ = OK
 path/py/ = None
 
+
+
+video :14
+<h2> Filters <h2/> 
+<h2> Date Time <h2/> 
+<h2> Float Format <h2/>  
+<h2> If Tag <h2/>
+<h2> If Else Tag <h2/>
+<h2> If Elif Tag <h2/>
+<h2> For Loop <h2/>
+<h2> H2--------- <h2/>
