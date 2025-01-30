@@ -70,11 +70,11 @@ from datetime import datetime
 
 
 
-
 # Example 8
 def learn_django(req):
     student = {'name': 'Rahul', 'roll':101}
     return render(req, 'course/django.html', {'student': student})
+
 
 
 # Example 9
