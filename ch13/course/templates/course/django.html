@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %} <link rel="stylesheet" href="{% static 'course/css/style.css' %}"> {% endcomment %}
+    <link rel="stylesheet" href="/static/course/css/style.css">
+
+    <title>Django </title>
+</head>
+<body>
+    <h1> Hello, {{nm}} with Static Files <h1/>
+    <img src="/static/course/images/aa.jpg" alt="img" width='600px'>
+    <form action="">
+        <input type="button" value="Click Me" onclick="disp()" />
+    </form>
+    {% comment %} <script src="{% static 'course/js/scripts.js' %}"></script> this line or below line {% endcomment %}   
+    <script src="/static/course/js/scripts.js"></script>
+
+</body>
+</html>
