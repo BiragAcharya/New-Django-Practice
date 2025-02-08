@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Document </title>
+</head>
+<body>
+    <h1> Student Registration </h1>
+
+   {% comment %} <form action="">
+      {{form}}
+    <input type="submit" value="Submit">
+   </form>  {% endcomment %}
+
+
+   {% comment %} <form action="">
+    {{form.first_name.label_tag}} {{form.first_name}}  <br />
+    {{form.last_name.label_tag}} {{form.last_name}}  <br />
+  <input type="submit" value="Submit">
+ </form>  {% endcomment %}
+
+
+ {% comment %} <form action="">
+   <label for="{{form.first_name.id_for_label}}"> {{form.first_name.label}}</label> {{form.first_name}}  <br />
+   <label for="{{form.last_name.id_for_label}}"> {{form.last_name.label}}</label> {{form.last_name}}  <br />
+
+  <input type="submit" value="Submit">
+ </form> {% endcomment %}
+
+
+ {% comment %} <form action="">
+    <label for="{{form.first_name.id_for_label}}">First Name:</label> {{form.first_name}}  <br />
+
+    <label for="{{form.last_name.id_for_label}}"> Last Name:</label> {{form.last_name}}  <br />
+    
+   <input type="submit" value="Submit">
+  </form> {% endcomment %}
+
+
+
+  <form action="">
+    <label for="{{form.first_name.id_for_label}}">First Name:</label> 
+    <input type="text" name="{{form.first_name.name}}" required id="{{form.first_name.id_for_label}}" value="{{form.first_name.value|default:''}}"> <br />
+
+    <label for="{{form.last_name.id_for_label}}"> Last Name:</label>
+    <input type="text" name="{{form.last_name.name}}" required id="{{form.last_name.id_for_label}}"  value="{{form.last_name.value}}"> <br />
+    
+    <label for="{{form.email.id_for_label}}"> Email:</label>
+    <input type="text" name="{{form.email.name}}" required id="{{form.email.id_for_label}}"  value="{{form.email.value}}"> <br />
+    
+
+   <input type="submit" value="Submit">
+  </form>
+  <br />
+  <br />
+  <br />
+
+<h1>***************** NewLine*********************</h1>
+
+  <div>
+    {{form.first_name.label}}
+    {{form.first_name.value}}
+    {{form.first_name.html_name}}
+    {{form.first_name.field.required}}
+    {{form.city.help_text}} 
+  </div>
+  
+</body>
+</html>
