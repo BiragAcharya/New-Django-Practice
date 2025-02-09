@@ -18,7 +18,8 @@ from django import forms
 from student.models import Profile
 
 class Registration(forms.ModelForm):
-    name= forms.CharField(max_length=50)
+    name= forms.CharField(max_length=50, required=False)
+    confirm_password = forms.CharField()
 
     class Meta:
         model = Profile
