@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Document </title>
+    <style>
+      .custom-error-css{
+        color:red
+      }
+    </style>
+</head>
+<body>
+    <h1> Student Registration </h1>
+   {% comment %} <form action="" method="POST" novalidate>
+    {% csrf_token %} 
+      {{form.as_p}}
+    <input type="submit" value="Submit">
+   </form> {% endcomment %}
+
+
+   {% comment %} <form action="" method="POST" novalidate>
+    {% csrf_token %} 
+    {{ form.non_field_errors}}
+      {% for field in form %}
+      <div>
+        {{field.label_tag}} {{field}} <span class='custom-error-css'> {{field.errors|striptags}} </span>
+      </div>
+      {% endfor %}  
+    <input type="submit" value="Submit">
+   </form> {% endcomment %}
+
+
+
+
+   <form action="" method="POST" novalidate>
+    {% csrf_token %} 
+    {{ form.non_field_errors}}
+      {% for field in form %}
+      <div>
+        {{field.label_tag}} {{field}}
+        {% for error in field.errors %}
+         <span class='custom-error-css'> {{error}} </span>
+        {% endfor %}
+      </div>
+      {% endfor %}  
+    <input type="submit" value="Submit">
+   </form>
+</body>
+</html>
+
+
+{% comment %} novalidate --- it helps to show validations from django rather than html validation{% endcomment %}
+
+
+
+{% comment %} {% for field in form %}
+      <div>
+        {{field.label_tag}} {{field}}
+      </div>
+      {% endfor %}  
+yesari garepaxi error ko lagi pani tag lekhnu parxa natra dekhaudaina {% endcomment %}
