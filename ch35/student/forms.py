@@ -23,7 +23,11 @@ class Registration(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields=['name', 'email',  'password']
+        # fields=['name', 'email',  'password']
+        fields= '__all__'
+        # exclude = ['name']
+
+
         labels = {'name': 'Enter Name', 'email': 'Enter Email'}
         error_messages = {
             'email':{'required': 'Email is required'}
